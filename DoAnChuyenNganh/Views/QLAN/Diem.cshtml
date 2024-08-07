@@ -1,0 +1,292 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_LayoutDiem.cshtml";
+}
+
+<body>
+    <div class="container-index">
+        <h2>HỆ THỐNG QUẢN LÝ TRUNG TÂM ANH NGỮ</h2>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <a class="navbar-brand" href="~/QLAN/TrangChu">Trang chủ</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/Lop">Quản lý lớp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/DangKy">Quản lý đăng ký</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/HocVien">Quản lý học viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="~/QLAN/Diem">Quản lý điểm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/GiangVien">Quản lý giảng viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/LichGiangDay">Xem lịch giảng dạy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/DiemDanh">Điểm danh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/BaoCao">Thống kê báo cáo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="modal fade" id="formScoreChecking">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Danh sách học viên</h4>
+                        <div class="d-flex">
+                            <div class="d-none d-lg-block col-lg-12">
+                                <div class="form-inline">
+                                    <div class="search-container">
+                                        <input class="form-control mr-sm-2" id="myInputStudent" type="search"
+                                               placeholder="Tìm kiếm học viên" aria-label="Search">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Mã số</th>
+                                    <th>Họ và Tên</th>
+                                    <th>Điểm lần 1</th>
+                                    <th>Điểm lần 2</th>
+                                    <th>Điểm lần 3</th>
+                                    <th>Điểm trung bình</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTableStudent">
+                                @foreach (var item in ViewBag.HocVienDiems)
+                                {
+                                    <tr>
+                                        <td>@item.HocVien.MaSoHocVien</td>
+                                        <td>@item.HocVien.TenHocVien</td>
+                                        <td>@item.Diem.DiemLan1</td>
+                                        <td>@item.Diem.DiemLan2</td>
+                                        <td>@item.Diem.DiemLan3</td>
+                                        <td>@item.Diem.DiemTrungBinh</td>
+                                        <td><a class="btn btn-success" onclick="window.location.href ='createDiem'">Nhập</a></td>
+                                        <td>
+                                            <button class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#formScoreUpdate" data-hocvienid="@item.HocVien.MaSoHocVien">
+                                                Sửa
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Quay lại</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="formScoreUpdate">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Vui lòng nhập điểm</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Điểm lần 1</th>
+                                    <th>Điểm lần 2</th>
+                                    <th>Điểm lần 3</th>
+                                </tr>
+                            </thead>
+                            <tbody id="myInputScoreUpt">
+                                @foreach (var item in ViewBag.HocVienDiems)
+                                {
+                                    <tr>
+                                        <input type="hidden" value="@item.HocVien.MaSoHocVien">
+                                        <td><input type="text" id="diem1" value=@item.Diem.DiemLan1></td>
+                                        <td><input type="text" id="diem2" value=@item.Diem.DiemLan2></td>
+                                        <td><input type="text" id="diem3" value=@item.Diem.DiemLan3></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                        <button type="button" class="btn btn-success" id="btnScoreUpdate"
+                                data-dismiss="modal">
+                            Lưu
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="d-flex">
+            <div class="d-none d-lg-block col-lg-12">
+                <div class="form-inline">
+                    <div class="search-container">
+                        <input class="form-control mr-sm-2" id="myInput" type="search" placeholder="Tìm kiếm lớp"
+                               aria-label="Search">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <br>
+
+    <div class="container-fluid">
+        <h2>Danh sách lớp học</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Mã lớp</th>
+                        <th>Tên lớp</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Thời gian học</th>
+                        <th>Ca học</th>
+                        <th>Sỉ số lớp</th>
+                        <th>Tên giảng viên</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    @foreach (var item in ViewBag.Lop)
+                    {
+                        <tr>
+                            <td>@item.MaLop</td>
+                            <td>@item.TenLop</td>
+                            <td>@item.NgayBatDau</td>
+                            <td>@item.NgayKetThuc</td>
+                            <td>@item.ThoiGianHoc</td>
+                            <td>@item.CaHoc</td>
+                            <td>@item.SiSo</td>
+                            <td>@item.TenGiangVien</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#formScoreChecking">
+                                    Hiển
+                                    thị
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.btn-success').click(function () {
+                var hocvienid = $(this).data('hocvienid');
+
+                $('#myInputScore tr').each(function () {
+                    if ($(this).find('input[type="hidden"]').val() == hocvienid) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+
+            $('.btn-primary').click(function () {
+                var hocvienid = $(this).data('hocvienid');
+
+                $('#myInputScoreUpt tr').each(function () {
+                    if ($(this).find('input[type="hidden"]').val() == hocvienid) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnScoreAdd").click(function () {
+                alert("Điểm đã được cập nhật");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btnScoreUpdate").click(function () {
+                alert("Điểm đã được cập nhật");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    var rows = $(this).find('td');
+                    var search_strings = '';
+                    $.each(rows, function (index, td) {
+                        if (index == 0 || index == 1 || index == 7) {
+                            search_strings += $(td).text();
+                        }
+                    });
+                    $(this).toggle(search_strings.toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInputStudent").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTableStudent tr").filter(function () {
+                    var rows = $(this).find('td');
+                    var search_strings = '';
+                    $.each(rows, function (index, td) {
+                        if (index == 0 || index == 1) {
+                            search_strings += $(td).text();
+                        }
+                    });
+                    $(this).toggle(search_strings.toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+</body>

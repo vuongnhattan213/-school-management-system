@@ -1,0 +1,298 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_LayoutDangKy.cshtml";
+}
+<body>
+    <div class="container-index">
+        <h2>HỆ THỐNG QUẢN LÝ TRUNG TÂM ANH NGỮ</h2>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <a class="navbar-brand" href="~/QLAN/TrangChu">Trang chủ</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/Lop">Quản lý lớp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="~/QLAN/DangKy">Quản lý đăng ký</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/HocVien">Quản lý học viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/Diem">Quản lý điểm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/GiangVien">Quản lý giảng viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/LichGiangDay">Xem lịch giảng dạy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/DiemDanh">Điểm danh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/BaoCao">Thống kê báo cáo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="modal fade" id="formStudentRegister">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Danh sách học viên</h4>
+                        <div class="d-flex">
+                            <div class="d-none d-lg-block col-lg-12">
+                                <div class="form-inline">
+                                    <div class="search-container">
+                                        <input class="form-control mr-sm-2" id="myInputRegister" type="search"
+                                               placeholder="Tìm kiếm học viên" aria-label="Search">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Mã số</th>
+                                    <th>Họ và Tên</th>
+                                    <th>Giới tính</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Email</th>
+                                    <th class="text-success">Đăng ký</th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTableRegister">
+                                @foreach (var item in ViewBag.HocVien)
+                                {
+                                    <tr>
+                                        <td>@item.MaSoHocVien</td>
+                                        <td>@item.TenHocVien</td>
+                                        <td>@item.GioiTinh</td>
+                                        <td>@item.SoDienThoai</td>
+                                        <td>@item.Email</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                        <button type="button" class="btn btn-success" id="btnRegister"
+                                data-dismiss="modal">
+                            Thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="formStudentCancelRegister">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Danh sách học viên</h4>
+                        <div class="d-flex">
+                            <div class="d-none d-lg-block col-lg-12">
+                                <div class="form-inline">
+                                    <div class="search-container">
+                                        <input class="form-control mr-sm-2" id="myInputCancel" type="search"
+                                               placeholder="Tìm kiếm học viên" aria-label="Search">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Mã số</th>
+                                    <th>Họ và Tên</th>
+                                    <th>Giới tính</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Email</th>
+                                    <th class="text-secondary">Hủy đăng ký</th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTableCancel">
+                                @foreach (var item in ViewBag.HocVien)
+                                {
+                                    <tr>
+                                        <td>@item.MaSoHocVien</td>
+                                        <td>@item.TenHocVien</td>
+                                        <td>@item.GioiTinh</td>
+                                        <td>@item.SoDienThoai</td>
+                                        <td>@item.Email</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Quay lại</button>
+                        <button type="button" class="btn btn-success" id="btnCancel" data-dismiss="modal">
+                            Hoàn
+                            tất
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="d-flex">
+            <div class="d-none d-lg-block col-lg-12">
+                <div class="form-inline">
+                    <div class="search-container">
+                        <input class="form-control mr-sm-2" id="myInput" type="search" placeholder="Tìm kiếm lớp"
+                               aria-label="Search">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <br>
+
+    <div class="container-fluid">
+        <h2>Danh sách lớp học</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Mã lớp</th>
+                        <th>Tên lớp</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Thời gian học</th>
+                        <th>Ca học</th>
+                        <th>Sỉ số lớp</th>
+                        <th>Tên giảng viên</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    @foreach (var item in ViewBag.Lop)
+                    {
+                        <tr>
+                            <td>@item.MaLop</td>
+                            <td>@item.TenLop</td>
+                            <td>@item.NgayBatDau</td>
+                            <td>@item.NgayKetThuc</td>
+                            <td>@item.ThoiGianHoc</td>
+                            <td>@item.CaHoc</td>
+                            <td>@item.SiSo</td>
+                            <td>@item.TenGiangVien</td>
+                            <td>
+                                <button class="btn btn-success" data-toggle="modal" data-target="#formStudentRegister">
+                                    Đăng
+                                    ký
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-secondary" data-toggle="modal"
+                                        data-target="#formStudentCancelRegister">
+                                    Hủy đăng ký
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnRegister").click(function () {
+                alert("Đăng ký thành công");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btnCancel").click(function () {
+                alert("Hủy thành công");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    var rows = $(this).find('td');
+                    var search_strings = '';
+                    $.each(rows, function (index, td) {
+                        if (index == 0 || index == 1 || index == 7) {
+                            search_strings += $(td).text();
+                        }
+                    });
+                    $(this).toggle(search_strings.toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInputRegister").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTableRegister tr").filter(function () {
+                    var rows = $(this).find('td');
+                    var search_strings = '';
+                    $.each(rows, function (index, td) {
+                        if (index == 0 || index == 1 || index == 3 || index == 4) {
+                            search_strings += $(td).text();
+                        }
+                    });
+                    $(this).toggle(search_strings.toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInputCancel").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTableCancel tr").filter(function () {
+                    var rows = $(this).find('td');
+                    var search_strings = '';
+                    $.each(rows, function (index, td) {
+                        if (index == 0 || index == 1 || index == 3 || index == 4) {
+                            search_strings += $(td).text();
+                        }
+                    });
+                    $(this).toggle(search_strings.toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+</body>

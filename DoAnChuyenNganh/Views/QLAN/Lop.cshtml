@@ -1,0 +1,187 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_LayoutLop.cshtml";
+}
+<body>
+    <div class="container-index">
+        <h2>HỆ THỐNG QUẢN LÝ TRUNG TÂM ANH NGỮ</h2>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <a class="navbar-brand" href="~/QLAN/TrangChu">Trang chủ</a>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="~/QLAN/Lop">Quản lý lớp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/DangKy">Quản lý đăng ký</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/HocVien">Quản lý học viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/Diem">Quản lý điểm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/GiangVien">Quản lý giảng viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/LichGiangDay">Xem lịch giảng dạy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/DiemDanh">Điểm danh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/BaoCao">Thống kê báo cáo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+
+        <div>
+            <a class="btn btn-success" onclick="window.location.href='createLop'">Thêm lớp mới</a>
+        </div>
+    </header>
+
+    <br>
+
+    <div class="container-fluid">
+        <h2>Danh sách lớp học</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Mã lớp</th>
+                        <th>Tên lớp</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Thời gian học</th>
+                        <th>Ca học</th>
+                        <th>Sỉ số lớp</th>
+                        <th>Tên giảng viên</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MaLop</td>
+                            <td>@item.TenLop</td>
+                            <td>@item.NgayBatDau</td>
+                            <td>@item.NgayKetThuc</td>
+                            <td>@item.ThoiGianHoc</td>
+                            <td>@item.CaHoc</td>
+                            <td>@item.SiSo</td>
+                            <td>@item.TenGiangVien</td>
+                            <td><a asp-action="UpdateLop" asp-route-itemid="@item.MaLop" class="btn btn-primary">Sửa</a></td>
+                            <td><a asp-action="DeleteLop" asp-route-itemid="@item.MaLop" class="btn btn-danger">Xóa</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade" id="formClassUpdate">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Vui lòng điền thông tin lớp</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="classCode">Mã lớp:</label>
+                            <input type="text" class="form-control" id="classCode">
+                        </div>
+                        <div class="form-group">
+                            <label for="className">Tên lớp:</label>
+                            <input type="text" class="form-control" id="className">
+                        </div>
+                        <div class="form-group">
+                            <label for="className">Ngày bắt đầu:</label>
+                            <input type="text" class="form-control" id="classStartDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="className">Ngày kết thúc:</label>
+                            <input type="text" class="form-control" id="classEndDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="className">Thời gian học:</label>
+                            <input type="text" class="form-control" id="classTime">
+                        </div>
+                        <div class="form-group">
+                            <label for="className">Ca học:</label>
+                            <input type="text" class="form-control" id="classShift">
+                        </div>
+                        <div class="form-group">
+                            <label for="className">Sỉ số lớp:</label>
+                            <input type="text" class="form-control" id="classSize">
+                        </div>
+                        <div class="form-group">
+                            <label for="className">Tên giảng viên</label>
+                            <input type="text" class="form-control" id="classTeacher">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal" id="btnUpdateClass">Hoàn tất</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmDeleteClass">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Cảnh báo</h5>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc muốn xóa không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger" id="btnDeleteClass" data-dismiss="modal">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnAddClass").click(function () {
+                alert("Tạo thành công");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btnUpdateClass").click(function () {
+                alert("Cập nhật thành công");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btnDeleteClass").click(function () {
+                alert("Xóa thành công");
+            });
+        });
+    </script>
+</body>

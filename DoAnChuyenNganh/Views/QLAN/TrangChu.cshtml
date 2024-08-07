@@ -1,0 +1,84 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_LayoutTrangChu.cshtml";
+}
+<body>
+    <div class="container-index">
+        <h2>HỆ THỐNG QUẢN LÝ TRUNG TÂM ANH NGỮ</h2>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <a class="navbar-brand" href="~/QLAN/TrangChu">Trang chủ</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/Lop">Quản lý lớp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/DangKy">Quản lý đăng ký</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/HocVien">Quản lý học viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/Diem">Quản lý điểm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/GiangVien">Quản lý giảng viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/LichGiangDay">Xem lịch giảng dạy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/DiemDanh">Điểm danh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/QLAN/BaoCao">Thống kê báo cáo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid bg-white d-flex justify-content-center">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/image/1.PNG" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/image/2.PNG" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/image/3.PNG" class="d-block w-100" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/image/4.PNG" class="d-block w-100" alt="Slide 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/image/5.PNG" class="d-block w-100" alt="Slide 4">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <hr />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>

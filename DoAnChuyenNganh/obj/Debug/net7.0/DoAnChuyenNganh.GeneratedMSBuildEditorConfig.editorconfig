@@ -1,0 +1,145 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DoAnChuyenNganh
+build_property.RootNamespace = DoAnChuyenNganh
+build_property.ProjectDir = C:\Users\NHATTAN\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\NHATTAN\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/BaoCao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxCYW9DYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/createDiem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxjcmVhdGVEaWVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/createGiangVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxjcmVhdGVHaWFuZ1ZpZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/createHocVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxjcmVhdGVIb2NWaWVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/createLop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxjcmVhdGVMb3AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/DangKy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxEYW5nS3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/Diem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxEaWVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/DiemDanh.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxEaWVtRGFuaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/GiangVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxHaWFuZ1ZpZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/HocVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxIb2NWaWVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/LichGiangDay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxMaWNoR2lhbmdEYXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/Lop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxMb3AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/TrangChu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlxUcmFuZ0NodS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/updateGiangVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlx1cGRhdGVHaWFuZ1ZpZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/updateHocVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlx1cGRhdGVIb2NWaWVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/QLAN/updateLop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUUxBTlx1cGRhdGVMb3AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_LayoutBaoCao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRCYW9DYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_LayoutDangKy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREYW5nS3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_LayoutDiem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREaWVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_LayoutDiemDanh.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREaWVtRGFuaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_LayoutGiangVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRHaWFuZ1ZpZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_LayoutLichGiangDay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMaWNoR2lhbmdEYXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_LayoutLop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb3AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_LayoutTrangChu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRUcmFuZ0NodS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xgtqblo4w3
+
+[C:/Users/NHATTAN/OneDrive/Desktop/DoAnChuyenNganh/DoAnChuyenNganh/Views/Shared/_LayoutHocVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRIb2NWaWVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-s7yu4tph60
